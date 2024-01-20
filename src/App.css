@@ -1,0 +1,90 @@
+main {
+  height: 90dvh;
+  width: 95dvw;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template: auto auto / repeat(5, 1fr);
+}
+
+@media (max-width: 400px) {
+  .container {
+    grid-template: auto auto auto/ repeat(3, 1fr);
+  }
+}
+
+.die {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 2px 0px #00000026;
+  cursor: pointer;
+}
+
+.die-number {
+  font-family: "Karla", sans-serif;
+}
+
+.die:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.roll--button {
+  margin-top: 40px;
+  height: 50px;
+  width: 100px;
+  background-color: #5035ff;
+  color: #ffffff;
+  font-family: "Karla";
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.roll--button:focus,
+.new-game:focus {
+  outline: none;
+}
+
+.roll--button:active,
+.new-game:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.new-game {
+  margin-top: 40px;
+  height: 50px;
+  width: 100px;
+  background-color: #5035ff;
+  color: #ffffff;
+  font-family: "Karla";
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.instructions {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  text-align: center;
+}
